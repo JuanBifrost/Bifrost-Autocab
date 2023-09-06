@@ -139,4 +139,28 @@ export class UalabeeService {
       throw error;
     }
   }
+
+  async getCustomAddresses(ghostToken: string) {
+    const headers = {
+      'Authentication-Token': ghostToken,
+    };
+
+    try {
+      console.log(
+        'Enviando solicitud para obtener Custom Addresses desde Ghost...',
+      );
+      const response = await this.httpService
+        .get(
+          'https://ghost-main-static-c18cc7d1e62e4c62a7d49d420c4a6e99.ghostapi.app:29003/api/ghostcompanion/v1/customaddresses',
+          { headers },
+        )
+        .toPromise();
+
+      console.log('Custom Addresses obtenidos desde Ghost:', response.data);
+      return response.data;
+    } catch (error) {
+      console.error('Error al obtener Custom Addresses desde Ghost:', error);
+      throw error;
+    }
+  }
 }

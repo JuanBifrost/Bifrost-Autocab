@@ -4,9 +4,9 @@ import { Controller, Post, Body } from '@nestjs/common';
 export class CompletedController {
   private lastModifiedId = 0;
 
-  @Post('modified')
+  @Post('completed')
   handleModifiedEvent(@Body() payload: any) {
-    console.log('Evento "/cancelled" recibido:', payload);
-    return 'Evento "/cancelled" recibido correctamente';
+    console.log('Evento "/completed" recibido:', payload);
+    return 'Evento "/completed" recibido correctamente';
   }
 }
