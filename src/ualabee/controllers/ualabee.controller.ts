@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get } from '@nestjs/common';
+import { Controller, Post, Body, Get, Query } from '@nestjs/common';
 import { UalabeeService } from '../services/ualabee.service';
 
 @Controller('ualabee')
@@ -39,8 +39,8 @@ export class UalabeeController {
     };
   }
 
-  @Get('customaddresses')
-  async getCustomAddresses() {
+  @Get('search')
+  async getCustomAddresses(@Query('searchText') searchText: string) {
     // Obtener el token Ghost
     const ghostToken = await this.ualabeeService.getTokenGhost();
 
@@ -48,7 +48,12 @@ export class UalabeeController {
     const customAddresses =
       await this.ualabeeService.getCustomAddresses(ghostToken);
 
-    // Devolver la respuesta de Custom Addresses
-    return customAddresses;
+    // Filtrar las direcciones que contienen el searchText
+    const filteredAddresses = customAddresses.filter((address: any) =>
+      address.address.text.toLowerCase().includes(searchText.toLowerCase()),
+    );
+
+    // Devolver las direcciones filtradas
+    return filteredAddresses;
   }
 }
