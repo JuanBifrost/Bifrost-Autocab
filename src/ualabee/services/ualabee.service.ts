@@ -12,10 +12,12 @@ export class UalabeeService {
     };
 
     try {
-      console.log('Enviando solicitud para obtener el token Ghost...');
+      console.log(
+        'Enviando solicitud para obtener el token Ghost...PRODUCCION',
+      );
       const response = await this.httpService
         .post(
-          'https://ghost-main-static-c18cc7d1e62e4c62a7d49d420c4a6e99.ghostapi.app:29003/api/v1/authenticate',
+          'https://ghost-main-static-4466116591644d61aca9e493190e3297.ghostapi.app:29003/api/v1/authenticate',
           requestBody,
         )
         .toPromise();
@@ -31,19 +33,19 @@ export class UalabeeService {
 
   async getTokenCAP() {
     const requestBody = {
-      cabExchangeAgentId: '32211',
+      cabExchangeAgentId: '32404',
       username: 'maruizpa@outlook.com',
       password: 'Aq12wsxcz**/',
     };
 
     try {
-      console.log('Enviando solicitud para obtener el token CAP...');
+      console.log('Enviando solicitud para obtener el token CAP...PRODUCCION');
       const response = await this.httpService
-        .post('https://capapi-beta.autocab.net/api/authenticate', requestBody)
+        .post('https://capapi.autocab.net/api/authenticate', requestBody)
         .toPromise();
 
       const capToken = response.data.token; // Asegúrate de ajustar el nombre del campo de acuerdo a la respuesta real
-      console.log('Token CAP obtenido:', capToken);
+      console.log('Token CAP obtenido - PRODUCCION:', capToken);
       return capToken;
     } catch (error) {
       console.error('Error al obtener el token CAP:', error);
@@ -62,7 +64,7 @@ export class UalabeeService {
       );
       const response = await this.httpService
         .get(
-          `https://ghost-main-static-c18cc7d1e62e4c62a7d49d420c4a6e99.ghostapi.app:29003/api/v1/corporateaccounts/20/getpassengers?searchfilter=${searchfilter}&pagesize=10&lookup=false`,
+          `https://ghost-main-static-4466116591644d61aca9e493190e3297.ghostapi.app:29003/api/v1/corporateaccounts/13/getpassengers?searchfilter=${searchfilter}&pagesize=10&lookup=false`,
           { headers },
         )
         .toPromise();
@@ -92,7 +94,7 @@ export class UalabeeService {
         'Enviando solicitud para obtener los detalles de la persona desde CAP...',
       );
       const response = await this.httpService
-        .get(`https://capapi-beta.autocab.net/api/persons/${passengerId}`, {
+        .get(`https://capapi.autocab.net/api/persons/${passengerId}`, {
           headers,
         })
         .toPromise();
@@ -118,12 +120,9 @@ export class UalabeeService {
         'Enviando solicitud para obtener el departamento desde CAP...',
       );
       const response = await this.httpService
-        .get(
-          `https://capapi-beta.autocab.net/api/departments/${departmentId}`,
-          {
-            headers,
-          },
-        )
+        .get(`https://capapi.autocab.net/api/departments/${departmentId}`, {
+          headers,
+        })
         .toPromise();
 
       console.log(
@@ -151,7 +150,7 @@ export class UalabeeService {
       );
       const response = await this.httpService
         .get(
-          'https://ghost-main-static-c18cc7d1e62e4c62a7d49d420c4a6e99.ghostapi.app:29003/api/ghostcompanion/v1/customaddresses',
+          'https://ghost-main-static-4466116591644d61aca9e493190e3297.ghostapi.app:29003/api/ghostcompanion/v1/customaddresses',
           { headers },
         )
         .toPromise();
