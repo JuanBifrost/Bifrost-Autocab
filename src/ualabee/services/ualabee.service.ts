@@ -17,7 +17,7 @@ export class UalabeeService {
       );
       const response = await this.httpService
         .post(
-          'https://ghost-main-static-4466116591644d61aca9e493190e3297.ghostapi.app:29003/api/v1/authenticate',
+          'https://app-30aedadca5434641afa97e56c141f06d.ghostapi.app:29003/api/v1/authenticate',
           requestBody,
         )
         .toPromise();
@@ -33,8 +33,8 @@ export class UalabeeService {
 
   async getTokenCAP() {
     const requestBody = {
-      cabExchangeAgentId: '32404',
-      username: 'maruizpa@outlook.com',
+      cabExchangeAgentId: '32204',
+      username: 'maruizpa@proton.me',
       password: 'Aq12wsxcz**/',
     };
 
@@ -64,7 +64,7 @@ export class UalabeeService {
       );
       const response = await this.httpService
         .get(
-          `https://ghost-main-static-4466116591644d61aca9e493190e3297.ghostapi.app:29003/api/v1/corporateaccounts/13/getpassengers?searchfilter=${searchfilter}&pagesize=10&lookup=false`,
+          `https://app-30aedadca5434641afa97e56c141f06d.ghostapi.app:29003/api/v1/corporateaccounts/17/getpassengers?searchfilter=${searchfilter}&pagesize=10&lookup=false`,
           { headers },
         )
         .toPromise();

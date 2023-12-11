@@ -3,7 +3,7 @@ import axios from 'axios';
 import moment from 'moment';
 
 const API_URL =
-  'https://ghost-main-static-c18cc7d1e62e4c62a7d49d420c4a6e99.ghostapi.app:29003/api/v1';
+  'https://ghost-main-static-f5c7a955837e494d9e8f2aff8304db7d.ghostapi.app:29003/api/v1';
 
 @Injectable()
 export default class ApiService {
@@ -46,7 +46,7 @@ export default class ApiService {
           currentDatetime.diff(referenceDatetime),
         );
         // Check if more than 5 minutes have passed
-        if (timeDifference.asMinutes() >= 5) {
+        if (timeDifference.asMinutes() >= 9) {
           try {
             await axios.delete(`${API_URL}/bookings/${booking.id}`, {
               headers,

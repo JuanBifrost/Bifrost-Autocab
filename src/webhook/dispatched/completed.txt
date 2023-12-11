@@ -1,0 +1,143 @@
+{
+    DriverDetails: {
+      Driver: {
+        Id: 13,
+        Callsign: '2-9521',
+        Forename: 'Miguel Angel',
+        Surname: 'Ruiz Patarroyo',
+        BadgeNumber: '',
+        LicenceNumber: ''
+      }
+    },
+    VehicleDetails: {
+      Vehicle: {
+        Id: 2,
+        Callsign: '9521',
+        Registration: 'WTB441',
+        PlateNumber: '',
+        VINNumber: null,
+        DeviceId: null
+      }
+    },
+    EstimatedPickupTime: null,
+    CompletedAtTime: '2023-09-01T22:13:31.7652439-04:00',
+    PickedUpAtTime: null,
+    VehicleArrivedAtTime: null,
+    EventType: 'BookingCompleted',
+    BookingType: 'Completed',
+    TypeOfBooking: 'ASAP',
+    Id: 832,
+    OriginalBookingId: 832,
+    Pickup: {
+      Type: 'Pickup',
+      Address: 'Villa Universidad Gabriela Mistral',
+      Zone: { Id: 101, Descriptor: 'LasRejas', Name: 'LasRejas' },
+      Coordinates: { Longitude: -70.72134083333333, Latitude: -33.435247777777775 }
+    },
+    Vias: [
+      {
+        Type: 'Pickup',
+        Address: 'Pullman Transcorp',
+        Zone: [Object],
+        Coordinates: [Object]
+      },
+      {
+        Type: 'Pickup',
+        Address: 'San Germán / Esq. Los Tamarindos',
+        Zone: [Object],
+        Coordinates: [Object]
+      },
+      {
+        Type: 'Pickup',
+        Address: 'Sindicato Pudahuel, gimnasio enea',
+        Zone: [Object],
+        Coordinates: [Object]
+      },
+      {
+        Type: 'Pickup',
+        Address: 'Calle crusero peralillo',
+        Zone: [Object],
+        Coordinates: [Object]
+      }
+    ],
+    Destination: {
+      Type: 'Destination',
+      Address: 'Ramirez Sepulveda Luis Gustavo',
+      Zone: { Id: 1, Descriptor: '001', Name: 'Chapinero' },
+      Coordinates: { Longitude: -70.76291194444444, Latitude: -33.443715833333336 }
+    },
+    PickupDueTime: '2023-09-01T22:11:27.5557908',
+    DropOffDueTime: null,
+    Company: {
+      Id: 1,
+      Name: 'santiago 2023',
+      RegisteredNumber: '',
+      CompanyCode: '1'
+    },
+    Account: { Id: 19, AccountCode: 'Sant2023', DisplayName: 'Santiago 2023' },
+    LoyaltyCardID: null,
+    LoyaltyCardCostValue: 0,
+    AccountType: 'Customer',
+    PaymentType: 'Account',
+    Name: 'Yenni Hndez',
+    TelephoneNumber: '3204525560',
+    CustomerEmail: 'sebastian.baena@autocab.com',
+    Capabilities: [ { ShortCode: 'B', Name: 'Buses' } ],
+    Priority: 5,
+    Passengers: 2,
+    Luggage: 0,
+    DriverNote: 'P: Pasajero - 1 ',
+    OfficeNote: '',
+    YourReferences: {
+      YourReference1: '',
+      YourReference2: '',
+      YourReference3: '',
+      YourReference4: '',
+      YourReference5: '',
+      YourReference6: '',
+      YourReference7: '',
+      YourReference8: ''
+    },
+    OurReference: '',
+    FlightDetails: '',
+    Pricing: {
+      Fare: 0,
+      Cost: 0,
+      Price: 0,
+      ExtraCost: 0,
+      FixedCost: null,
+      FixedPrice: null,
+      ChargingAreaCost: 0,
+      ChargingAreaPrice: 0,
+      WaitingTime: 0,
+      WaitingTimeChargeable: 0,
+      GratuityAmount: 0,
+      CostSource: 'Precio Variable: Ejemplo',
+      PricingTariff: 'Ejemplo',
+      PromotionCodeDiscount: {
+        LoyaltyCardId: -9223372036854776000,
+        BookedDiscount: 0,
+        FinalDiscount: 0,
+        PayDriver: false,
+        RoundUpToNearest: 0,
+        Timestamp: '0001-01-01T00:00:00'
+      }
+    },
+    PriceComparison: {
+      GpsMeterDistance: 0,
+      GpsMeterPrice: 0,
+      GpsMeterPriceSource: '',
+      SystemEstimatedDistance: 5.9,
+      SystemEstimatedPrice: 0,
+      SystemEstimatedPriceSource: 'Precio Variable: Ejemplo',
+      EstimatedTime: '00:09:16.7000000'
+    },
+    Distance: 5.9,
+    SystemDistance: 5.9,
+    MeterDistance: 0,
+    MeterDistanceAsMetres: 0,
+    BookingSource: 'OperatorWeb',
+    BookedAtTime: '2023-09-01T22:11:27.5713397-04:00',
+    BookedBy: 'automator',
+    CabExchangeAgentBookingRef: ''
+  }

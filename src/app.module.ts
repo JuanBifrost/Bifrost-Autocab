@@ -13,6 +13,7 @@ import { UalabeeController } from './ualabee/controllers/ualabee.controller';
 import { UalabeeService } from './ualabee/services/ualabee.service';
 import { CancelledController } from './webhook/cancelled/cancelled.controller';
 import { CompletedController } from './webhook/completed/completed.controller';
+import { CatchallController } from './webhook/catchall/catchall.controller';
 
 @Module({
   controllers: [
@@ -27,6 +28,7 @@ import { CompletedController } from './webhook/completed/completed.controller';
     UalabeeController,
     CancelledController,
     CompletedController,
+    CatchallController,
   ],
   imports: [HttpModule],
   providers: [ApiService, UalabeeService],
